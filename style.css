@@ -197,10 +197,11 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
+    align-items: center; /* Все элементы по центру */
     gap: 20px;
-    position: relative;
+    height: 100%;
 }
+
 
 .main-nav a {
     color: white;
@@ -211,6 +212,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     white-space: nowrap;
+    display: flex;
+    align-items: flex-end;
 }
 
 .main-nav a::after {
@@ -249,7 +252,7 @@ body {
 .separator {
     position: relative;
     height: 1px;
-    width: 50px;
+    width: 70px;
     margin: 0 25px;
     overflow: hidden;
 }
@@ -278,7 +281,11 @@ body {
 .dropdown {
     position: relative;
     margin-left: 10px;
+    display: flex;
+    align-items: flex-end; /* Выравниваем по нижнему краю */
+    height: 100%;
 }
+
 
 .dropdown-content {
     display: block;
@@ -475,12 +482,6 @@ html {
 
 .dropdown.active .dropdown-content::before {
     height: 20px;
-}
-
-.hamburger-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Team Page Styles */
