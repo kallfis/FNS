@@ -79,6 +79,14 @@ html {
     .feature-box {
         width: 60% !important;
     }
+
+    .feature-box p{
+        font-size: 0.9rem !important;
+    }
+
+        .feature-box h2{
+        font-size: 1rem !important;
+    }
     
     .team-member {
         width: 100% !important;
@@ -766,11 +774,11 @@ h3 {
     }
     
     .text-part h2 {
-        font-size: 2rem;
+        font-size: 1.5rem !important;
     }
     
     .text-part p {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     
     .image-part {
