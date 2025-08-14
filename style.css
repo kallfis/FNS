@@ -38,7 +38,7 @@ html {
     .corner-logo {
         height: 60px !important;
         top: 32px !important;
-        left: 20px !important;
+        left: 10px !important;
     }
     
     .logo-text {
@@ -412,8 +412,8 @@ h1 span {
     border: 1px solid #17171d;
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
-    min-height: 80px;
+    width: 370px;
+    min-height: 150px;
     margin: 0;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -421,12 +421,16 @@ h1 span {
 }
 
 .feature-box h2 {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin-bottom: 15px;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     position: relative;
     z-index: 2;
+}
+
+.feature-box p {
+font-size: 1.2rem;
 }
 
 .blur-ball {
