@@ -101,14 +101,6 @@ html {
         flex-direction: column;
         gap: 15px !important;
     }
-
-    p {
-        font-size: 75% !important;
-    }
-
-    h2 {
-        font-size: 75% !important;
-    }
 }
 
 /* Общие стили */
@@ -713,4 +705,5 @@ h3 {
     margin-right: 8px;
     fill: currentColor;
 }
+
 
