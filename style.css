@@ -6,8 +6,26 @@ body {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     overflow-x: hidden;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+  width: 5px; /* Толщина полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Прозрачный фон */
+}
+
+::-webkit-scrollbar-thumb {
+  background: white; /* Белый цвет полосы */
+  border-radius: 2px; /* Закругление углов */
 }
 
 /* Мобильные стили */
@@ -19,7 +37,7 @@ body {
     
     .corner-logo {
         height: 60px !important;
-        top: 30px !important;
+        top: 32px !important;
         left: 20px !important;
     }
     
@@ -59,8 +77,7 @@ body {
     }
     
     .feature-box {
-        width: 100% !important;
-        margin-bottom: 20px !important;
+        width: 60% !important;
     }
     
     .team-member {
@@ -84,6 +101,14 @@ body {
         flex-direction: column;
         gap: 15px !important;
     }
+
+    p {
+        font-size: 75% !important;
+    }
+
+    h2 {
+        font-size: 75% !important;
+    }
 }
 
 /* Общие стили */
@@ -103,14 +128,14 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 50px;
     background: linear-gradient(to top, #000000, rgba(9, 9, 11, 0));
     z-index: 1;
 }
 
 .corner-logo {
     position: fixed;
-    top: 38px;
+    top: 34px;
     left: 100px;
     height: 90px;
     z-index: 12;
@@ -138,6 +163,7 @@ body {
     
     .corner-logo {
         margin-right: 10px;
+        top: 40px
     }
 }
 
@@ -214,6 +240,12 @@ body {
     white-space: nowrap;
     display: flex;
     align-items: flex-end;
+}
+
+/* Главная магия - скрываем подчеркивание активного пункта при наведении на другие */
+.main-nav ul:hover a.active-nav::after {
+    width: 0 !important;
+    transition: width 0.3s ease;
 }
 
 .main-nav a::after {
@@ -428,41 +460,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.dots-container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    margin-left: 8px;
-    position: relative;
-    height: 14px;
-    width: 8px;
-}
-
-.dot {
-    display: block;
-    width: 3px;
-    height: 3px;
-    background-color: white;
-    border-radius: 50%;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transform-origin: center;
-    position: absolute;
-    opacity: 0.8;
-}
-
-.dot:nth-child(1) { top: 0; }
-.dot:nth-child(2) { top: 50%; transform: translateY(-50%); }
-.dot:nth-child(3) { bottom: 0; }
-
-.dropdown.active .dots-container .dot {
-    width: 2px;
-    height: 100%;
-    border-radius: 1px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
 .dropdown-content::before {
     content: '';
     position: absolute;
@@ -513,14 +510,13 @@ html {
     width: 70px;
     height: 70px;
     margin: 0 auto 30px;
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: cover;
     position: relative;
     z-index: 2;
     transition: all 0.3s ease;
     border: 2px solid #2a2a30;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #1a1a1f;
 }
 
 .member-name {
@@ -717,3 +713,4 @@ h3 {
     margin-right: 8px;
     fill: currentColor;
 }
+
