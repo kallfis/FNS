@@ -101,6 +101,14 @@ html {
         flex-direction: column;
         gap: 15px !important;
     }
+
+    p {
+        font-size: 75% !important;
+    }
+
+    h2 {
+        font-size: 75% !important;
+    }
 }
 
 /* Общие стили */
@@ -208,6 +216,7 @@ html {
     transform: translateX(-50%);
     z-index: 12;
     pointer-events: auto;
+    
 }
 
 .main-nav ul {
@@ -366,7 +375,7 @@ html {
     position: relative;
     z-index: 1;
     padding: 100px 20px 120px;
-    max-width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
     text-align: center;
 }
@@ -706,4 +715,65 @@ h3 {
     fill: currentColor;
 }
 
+.content-block {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Уменьшили расстояние между текстом и изображением */
+    width: 100%;
+    padding: 0 20px;
+    margin: 50px auto;
+    box-sizing: border-box;
+}
 
+.text-part {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px; /* Добавили отступ справа от текста */
+}
+
+.text-part h2 {
+    font-size: 3rem;
+    margin-bottom: 15px; /* Уменьшили отступ под заголовком */
+    color: #fff;
+}
+
+.text-part p {
+    font-size: 1.5rem;
+    line-height: 1.5; /* Уменьшили межстрочный интервал */
+    color: #d1d1d1;
+    margin-bottom: 0; /* Убрали отступ снизу */
+}
+
+.image-part {
+    flex: 0 0 45%; /* Уменьшили ширину изображения */
+}
+
+.image-part img {
+    width: 100%;
+    max-width: 400px; /* Уменьшили максимальную ширину */
+    height: auto;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+        gap: 20px; /* Уменьшили расстояние между элементами */
+    }
+    
+    .text-part {
+        padding-right: 0;
+    }
+    
+    .text-part h2 {
+        font-size: 2rem;
+    }
+    
+    .text-part p {
+        font-size: 1rem;
+    }
+    
+    .image-part {
+        width: 50%;
+    }
+}
